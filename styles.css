@@ -1,0 +1,217 @@
+:root {
+    --primary-color: #0078d4;
+    --text-color: #333;
+    --bg-color: #f5f5f5;
+    --border-color: #ddd;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+}
+
+.header__logo {
+    width: 50px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.header__title {
+    display: inline-block;
+    margin: 0;
+    font-size: 1.5rem;
+    vertical-align: middle;
+}
+
+.main {
+    padding: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+.card__title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card__divider {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin: 20px 0;
+}
+
+.card__text {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.card__file-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.card__file-icon {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.card__file-size {
+    font-size: 1.2rem;
+}
+
+.card__instruction {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.card__microsoft-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.card__microsoft-icon {
+    width: 30px;
+    margin: 0 5px;
+}
+
+.card__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.card__input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.card__button {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+}
+
+.footer__copyright {
+    font-size: 0.8rem;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.footer__microsoft-logo {
+    width: 100px;
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 10px;
+    }
+
+    .header {
+        padding: 10px;
+    }
+
+    .header__logo {
+        width: 40px;
+    }
+
+    .header__title {
+        font-size: 1.2rem;
+    }
+
+    .main {
+        padding: 10px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card__title {
+        font-size: 1.3rem;
+    }
+
+    .card__text {
+        font-size: 0.9rem;
+    }
+
+    .card__file-icon {
+        width: 30px;
+    }
+
+    .card__file-size {
+        font-size: 1rem;
+    }
+
+    .card__instruction {
+        font-size: 0.9rem;
+    }
+
+    .card__input {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    .card__button {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .footer {
+        padding: 10px;
+    }
+
+    .footer__copyright {
+        font-size: 0.7rem;
+    }
+
+    .footer__microsoft-logo {
+        width: 80px;
+    }
+}
